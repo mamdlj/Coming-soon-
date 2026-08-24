@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MasterShop | Fortnite Save the World</title>
+  <link rel="stylesheet" href="savetheworld.css">
+</head>
+<body>
+  <div class="stw-page">
+    <header class="stw-header">
+      <a class="stw-logo" href="#">MASTER<span>SHOP</span></a>
+      <nav class="stw-nav">
+        <a href="#products">محصولات</a>
+        <a href="#add-product">افزودن محصول</a>
+        <a href="#features">مزایا</a>
+        <a href="#faq">سؤالات متداول</a>
+      </nav>
+      <a class="stw-cart" href="#products">مشاهده محصولات</a>
+    </header>
+
+    <main>
+      <section class="stw-hero">
+        <div class="stw-hero-glow"></div>
+        <div class="stw-hero-content">
+          <div class="stw-badge">FORTNITE • SAVE THE WORLD</div>
+          <h1>تجهیزات و آیتم‌های<br><strong>Save the World</strong></h1>
+          <p>محصولات Fortnite Save the World با طراحی اختصاصی MasterShop؛ سریع، ساده و مناسب بازیکنان ایرانی.</p>
+          <div class="stw-actions">
+            <a class="stw-btn stw-btn-primary" href="#products">مشاهده محصولات</a>
+            <a class="stw-btn stw-btn-ghost" href="#features">چرا MasterShop؟</a>
+          </div>
+        </div>
+        <div class="stw-hero-card">
+          <div class="stw-card-orb">STW</div>
+          <span>SAVE THE WORLD</span>
+          <b>READY TO PLAY</b>
+        </div>
+      </section>
+
+      <section class="stw-products" id="products">
+        <div class="stw-section-head">
+          <div>
+            <span>STORE</span>
+            <h2>محصولات Save the World</h2>
+          </div>
+          <p>برای شروع، محصول موردنظر خود را انتخاب کنید.</p>
+        </div>
+
+        <div class="stw-grid" id="productGrid">
+          <article class="stw-product">
+            <div class="stw-product-art art-one">STW</div>
+            <div class="stw-product-body">
+              <div class="stw-status">موجود</div>
+              <h3>Save the World Pack</h3>
+              <p>پکیج اختصاصی Save the World</p>
+              <div class="stw-product-bottom">
+                <strong>قیمت تماس</strong>
+                <button onclick="selectProduct('Save the World Pack')">انتخاب</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stw-product">
+            <div class="stw-product-art art-two">HERO</div>
+            <div class="stw-product-body">
+              <div class="stw-status">موجود</div>
+              <h3>Hero Pack</h3>
+              <p>پکیج قهرمانان و تجهیزات</p>
+              <div class="stw-product-bottom">
+                <strong>قیمت تماس</strong>
+                <button onclick="selectProduct('Hero Pack')">انتخاب</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stw-product">
+            <div class="stw-product-art art-three">WEAPON</div>
+            <div class="stw-product-body">
+              <div class="stw-status">موجود</div>
+              <h3>Weapon Pack</h3>
+              <p>پکیج تجهیزات و سلاح‌ها</p>
+              <div class="stw-product-bottom">
+                <strong>قیمت تماس</strong>
+                <button onclick="selectProduct('Weapon Pack')">انتخاب</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+      <section class="stw-add-product" id="add-product">
+        <div class="stw-section-head">
+          <div>
+            <span>PRODUCT MANAGER</span>
+            <h2>افزودن محصول</h2>
+          </div>
+          <p>عکس، نام محصول، توضیحات و قیمت را وارد کنید تا محصول به لیست فروش اضافه شود.</p>
+        </div>
+
+        <form id="addProductForm" class="stw-product-form">
+          <div class="stw-form-group">
+            <label for="productImage">عکس محصول</label>
+            <input id="productImage" type="file" accept="image/*">
+            <small>فرمت‌های رایج عکس مثل JPG و PNG</small>
+          </div>
+          <div class="stw-form-group">
+            <label for="productName">نام محصول</label>
+            <input id="productName" type="text" placeholder="مثلاً Founder Pack" required>
+          </div>
+          <div class="stw-form-group">
+            <label for="productDescription">توضیحات</label>
+            <textarea id="productDescription" placeholder="توضیح کوتاه محصول" rows="3"></textarea>
+          </div>
+          <div class="stw-form-group">
+            <label for="productPrice">قیمت</label>
+            <input id="productPrice" type="text" placeholder="مثلاً ۲۵۰,۰۰۰ تومان" required>
+          </div>
+          <button class="stw-add-btn" type="submit">+ اضافه کردن محصول</button>
+          <div id="productMessage" class="stw-product-message"></div>
+        </form>
+      </section>
+
+      <section class="stw-features" id="features">
+        <div class="stw-feature"><b>01</b><h3>طراحی اختصاصی</h3><p>ظاهر این بخش CSS مستقل دارد و برای فضای Save the World طراحی شده است.</p></div>
+        <div class="stw-feature"><b>02</b><h3>کاملاً Responsive</h3><p>نمایش بهینه روی موبایل، تبلت و دسکتاپ.</p></div>
+        <div class="stw-feature"><b>03</b><h3>خرید ساده</h3><p>مسیر انتخاب محصول کوتاه و واضح طراحی شده است.</p></div>
+      </section>
+
+      <section class="stw-faq" id="faq">
+        <h2>سؤالات متداول</h2>
+        <details><summary>محصولات برای کدام بخش Fortnite هستند؟</summary><p>این صفحه برای محصولات Fortnite Save the World طراحی شده است.</p></details>
+        <details><summary>آیا می‌توان محصولات را بعداً اضافه کرد؟</summary><p>بله؛ کارت‌های محصول به‌صورت مستقل طراحی شده‌اند و می‌توان تعدادشان را افزایش داد.</p></details>
+      </section>
+    </main>
+
+    <footer class="stw-footer">© 2026 MasterShop — Fortnite Save the World</footer>
+  </div>
+  <script src="savetheworld.js"></script>
+</body>
+</html>
