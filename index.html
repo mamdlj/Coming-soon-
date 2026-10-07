@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A premium coming soon page.">
+  <title>Coming Soon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+
+  <main class="card">
+    <div class="badge">● UNDER DEVELOPMENT</div>
+    <h1>Something <span>great</span><br>is coming.</h1>
+    <p>We’re crafting a new experience. Stay tuned — the launch is closer than you think.</p>
+
+    <div class="countdown" aria-label="Countdown">
+      <div><strong id="days">00</strong><small>Days</small></div>
+      <div><strong id="hours">00</strong><small>Hours</small></div>
+      <div><strong id="minutes">00</strong><small>Minutes</small></div>
+      <div><strong id="seconds">00</strong><small>Seconds</small></div>
+    </div>
+
+    <form class="notify" onsubmit="return subscribe(event)">
+      <input id="email" type="email" placeholder="Enter your email" aria-label="Email address" required>
+      <button type="submit">Notify me</button>
+    </form>
+    <p id="message" class="message"></p>
+
+    <footer>© 2026 • Built with passion</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
