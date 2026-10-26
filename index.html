@@ -3,33 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A premium coming soon page.">
   <title>Coming Soon</title>
+  <meta name="description" content="A premium coming soon page.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coming Soon">
+  <meta property="og:description" content="We’re crafting a new experience. Stay tuned.">
+  <meta name="theme-color" content="#07080d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;600;800&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="glow glow-one"></div>
   <div class="glow glow-two"></div>
 
+  <button id="lang" class="lang" type="button" aria-label="Change language">فارسی</button>
+
   <main class="card">
-    <div class="badge">● UNDER DEVELOPMENT</div>
-    <h1>Something <span>great</span><br>is coming.</h1>
-    <p>We’re crafting a new experience. Stay tuned — the launch is closer than you think.</p>
+    <div class="badge" data-i18n="badge">● UNDER DEVELOPMENT</div>
+    <h1 data-i18n-html="title">Something <span>great</span><br>is coming.</h1>
+    <p data-i18n="text">We’re crafting a new experience. Stay tuned — the launch is closer than you think.</p>
 
     <div class="countdown" aria-label="Countdown">
-      <div><strong id="days">00</strong><small>Days</small></div>
-      <div><strong id="hours">00</strong><small>Hours</small></div>
-      <div><strong id="minutes">00</strong><small>Minutes</small></div>
-      <div><strong id="seconds">00</strong><small>Seconds</small></div>
+      <div><strong id="days">00</strong><small data-i18n="days">Days</small></div>
+      <div><strong id="hours">00</strong><small data-i18n="hours">Hours</small></div>
+      <div><strong id="minutes">00</strong><small data-i18n="minutes">Minutes</small></div>
+      <div><strong id="seconds">00</strong><small data-i18n="seconds">Seconds</small></div>
     </div>
 
     <form class="notify" onsubmit="return subscribe(event)">
-      <input id="email" type="email" placeholder="Enter your email" aria-label="Email address" required>
-      <button type="submit">Notify me</button>
+      <input id="email" type="email" placeholder="Enter your email" data-i18n-ph="placeholder" aria-label="Email address" required>
+      <button type="submit" data-i18n="button">Notify me</button>
     </form>
-    <p id="message" class="message"></p>
+    <p id="message" class="message" role="status" aria-live="polite"></p>
 
-    <footer>© 2026 • Built with passion</footer>
+    <footer data-i18n="footer">© 2026 • Built with passion</footer>
   </main>
 
   <script src="script.js"></script>
