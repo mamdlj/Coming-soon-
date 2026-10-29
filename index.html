@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A premium coming soon page.">
-  <title>Coming Soon</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon — Something great is coming</title>
+<meta name="description" content="A new experience is on its way. Join the waitlist to be first in line.">
+<meta name="theme-color" content="#06070b">
+<meta property="og:title" content="Coming Soon">
+<meta property="og:description" content="Something great is coming. Join the waitlist.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='26' fill='%2306070b'/><circle cx='50' cy='50' r='16' fill='%238f85ff'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-  <div class="glow glow-one"></div>
-  <div class="glow glow-two"></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="grid" aria-hidden="true"></div>
+<div class="spot" aria-hidden="true"></div>
 
-  <main class="card">
-    <div class="badge">● UNDER DEVELOPMENT</div>
-    <h1>Something <span>great</span><br>is coming.</h1>
-    <p>We’re crafting a new experience. Stay tuned — the launch is closer than you think.</p>
+<main class="card" id="card">
+  <div class="badge"><span class="dot"></span>Launching soon</div>
+  <h1>Something <span class="grad" id="word">great</span><br>is coming.</h1>
+  <p class="lead">We’re crafting a new experience. Join the waitlist and be the first to know when we go live.</p>
 
-    <div class="countdown" aria-label="Countdown">
-      <div><strong id="days">00</strong><small>Days</small></div>
-      <div><strong id="hours">00</strong><small>Hours</small></div>
-      <div><strong id="minutes">00</strong><small>Minutes</small></div>
-      <div><strong id="seconds">00</strong><small>Seconds</small></div>
-    </div>
+  <div class="countdown" aria-label="Countdown to launch">
+    <div><strong id="days">00</strong><small>Days</small></div>
+    <div><strong id="hours">00</strong><small>Hours</small></div>
+    <div><strong id="minutes">00</strong><small>Minutes</small></div>
+    <div><strong id="seconds">00</strong><small>Seconds</small></div>
+  </div>
 
-    <form class="notify" onsubmit="return subscribe(event)">
-      <input id="email" type="email" placeholder="Enter your email" aria-label="Email address" required>
-      <button type="submit">Notify me</button>
-    </form>
-    <p id="message" class="message"></p>
+  <div class="progress" title="Progress to launch"><span id="bar"></span></div>
+  <div class="progress-meta"><span>Progress</span><b id="pct">0%</b></div>
 
-    <footer>© 2026 • Built with passion</footer>
-  </main>
+  <form class="notify" id="form" novalidate>
+    <input id="email" type="email" placeholder="you@example.com" aria-label="Email address" autocomplete="email" required>
+    <button type="submit">Notify me</button>
+  </form>
+  <p id="message" class="message" role="status"></p>
 
-  <script src="script.js"></script>
+  <div class="social">
+    <a href="https://github.com/mamdlj" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://t.me/NeoCode5" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://www.instagram.com/my_laste" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <footer>© 2026 • Built with passion</footer>
+</main>
+<canvas id="fx" aria-hidden="true"></canvas>
+<script src="script.js?v=2"></script>
 </body>
 </html>
